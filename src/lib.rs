@@ -1,6 +1,6 @@
 use std::{collections::HashSet, sync::LazyLock};
 
-/// get BUILTIN_MODULES for nodejs module
+/// Get BUILTIN_MODULES for nodejs module
 ///
 /// [
 ///     "_http_agent",
@@ -155,3 +155,15 @@ pub static BUILTIN_MODULES: LazyLock<HashSet<String>> = LazyLock::new(|| {
     .map(|m| m.to_string())
     .collect::<HashSet<_>>()
 });
+
+/// Check whether builtin module
+///
+/// # Example
+/// ```
+/// assert!(builtin_modules::is_builtin_module("path"));
+/// assert!(builtin_modules::is_builtin_module("fs/promises"));
+/// assert!(!builtin_modules::is_builtin_module("abc"));
+/// ```
+pub fn is_builtin_module(name: &str) -> bool {
+    BUILTIN_MODULES.contains(name)
+}

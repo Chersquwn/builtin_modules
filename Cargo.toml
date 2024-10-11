@@ -1,9 +1,11 @@
 [package]
 name = "builtin_modules"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["Chersquwn <chersquwn@gmail.com>"]
 description = "A static list of the Node.js builtin modules from the latest Node.js version in rust"
+repository = "https://github.com/Chersquwn/builtin_modules"
+homepage = "https://github.com/Chersquwn/builtin_modules"
 license = "MIT"
 
 [dependencies]
