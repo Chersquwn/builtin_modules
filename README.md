@@ -11,7 +11,8 @@ cargo add builtin_modules
 ## Usage
 
 ```rust
-use builtin_modules::BUILTIN_MODULES;
+use builtin_modules::{BUILTIN_MODULES, is_builtin_module};
 
 assert!(BUILTIN_MODULES.contains("path"));
+assert!(is_builtin_module("path"));
 ```
